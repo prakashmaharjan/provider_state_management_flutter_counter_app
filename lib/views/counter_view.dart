@@ -7,7 +7,7 @@ class CounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final counterViewModel = Provider.of<CounterViewModel>(context);
+    //final counterViewModel = Provider.of<CounterViewModel>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -16,9 +16,13 @@ class CounterView extends StatelessWidget {
       body: SafeArea(
         
         child: Center(
-          child: Text(
-            counterViewModel.counter.value.toString(),
-            style: const TextStyle(fontSize: 100, fontWeight: FontWeight.bold),
+          child: Consumer<CounterViewModel>(
+            builder: (context, counterViewModel, child){
+            return Text(
+              counterViewModel.counter.value.toString(),
+              style: const TextStyle(fontSize: 100, fontWeight: FontWeight.bold),
+            );
+            }
           ),
         ),
       ),
@@ -28,19 +32,22 @@ class CounterView extends StatelessWidget {
         children: [
           FloatingActionButton(
             heroTag: "increment",
-            onPressed: counterViewModel.increment,
+            onPressed: //counterViewModel.increment,
+             context.read<CounterViewModel>().increment,
             child: const Icon(Icons.add),
           ),
           const SizedBox(height: 10),
           FloatingActionButton(
             heroTag: "decrement",
-            onPressed: counterViewModel.decrement,
+            onPressed: //counterViewModel.decrement,
+            context.read<CounterViewModel>().decrement,
             child: const Icon(Icons.remove),
           ),
           const SizedBox(height: 10),
           FloatingActionButton(
             heroTag: "reset",
-            onPressed: counterViewModel.reset,
+            onPressed: //counterViewModel.reset,
+            context.read<CounterViewModel>().reset,
             child: const Icon(Icons.refresh),
           ),
         ],
