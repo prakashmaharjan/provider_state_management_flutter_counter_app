@@ -1,0 +1,91 @@
+# -------------------------------------------------------------------
+# Flutter & Dart Core
+# -------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+ephemeral/
+
+# Automatically generated plugin files
+android/app/src/main/java/io/flutter/plugins/
+ios/Runner/GeneratedPluginRegistrant.h
+ios/Runner/GeneratedPluginRegistrant.m
+lib/generated_plugin_registrant.dart
+linux/flutter/generated_plugin_registrant.cc
+linux/flutter/generated_plugin_registrant.h
+macos/Flutter/GeneratedPluginRegistrant.swift
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugin_registrant.h
+
+# Symbol files and web build artifacts
+*.js.deps
+*.js.map
+*.info.json
+
+# -------------------------------------------------------------------
+# Android Specifics
+# -------------------------------------------------------------------
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+**/android/local.properties
+**/android/key.properties
+**/android/app/google-services.json
+.gradle/
+captures/
+output.json
+
+# -------------------------------------------------------------------
+# iOS & macOS Specifics
+# -------------------------------------------------------------------
+*.mojarra
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+**/.Xil/
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/DerivedData/
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Runner/GoogleService-Info.plist
+.swp
+*~
+dSYM/
+*.moved-aside
+
+# CocoaPods specific ignores
+Podfile.lock
+
+# -------------------------------------------------------------------
+# Development Environment & IDEs
+# -------------------------------------------------------------------
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+# IntelliJ IDEA / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------------------------------
+# Secrets & Environment Variables (Crucial for Security)
+# -------------------------------------------------------------------
+.env
+.env.*
+!.env.example
